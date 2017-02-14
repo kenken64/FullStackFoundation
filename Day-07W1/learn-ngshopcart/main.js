@@ -5,9 +5,12 @@ var bodyParser = require('body-parser');
 
 // This create an instance of express app
 var app = express();
+
+// set the directory of the publick folder
 app.use(express.static(__dirname + "/public") );
+
 //app.use(express.static(__dirname + "/bower_components"));
-console.log("...");
+// console.log("...");
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
