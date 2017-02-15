@@ -1,99 +1,52 @@
-// This JS script is to load expressJS and path
-var path = require ("path");
-var express = require ("express");
-var bodyParser = require('body-parser');
+//Load the libraries
+var path = require("path");
+var express = require("express");
 
-// This create an instance of express app
+//Create an instance of the application
 var app = express();
 
-// set the directory of the publick folder
-app.use(express.static(__dirname + "/public") );
-
-//app.use(express.static(__dirname + "/bower_components"));
-// console.log("...");
-app.use(bodyParser.urlencoded({extended: false}));
-app.use(bodyParser.json());
-
-// Hard loading bower.io libaries to the /bower_components
-
-
-
-// Define route of the path
-//app.get("/", function(req,resp) {});
-
+//master order
+var allOrders = [];
 
 //Define routes
-// /employee/1 /employee/2
-/* app.get("/employee/:empNo", function(req, resp) {
+//
+var createOrder = function(ord) {
+	return ({
+		from: ord.from,
+		to: ord.to,
+		notes: ord.notes,
+		quantity: ord.quantity,
+		flower: ord.flower,
+		colours: ord.colours
+	});
+}
 
-    console.log("req --> " + req);
-    var empNo = req.params.empNo;
-    //Retrieve data from database
+//The parameters are going to be in a query string
+app.get("/place-order", function(req, resp) {
 
-    //resp.status(200)
-    //resp.type(req.get("Accept"));
+	allOrders.push(createOrder(req.query));
 
-    console.log("Accept header: %s", req.get("Accept"));
+	console.log("All orders:\n %s", JSON.stringify(allOrders));
 
-    switch (req.get("Accept").toLowerCase()) {
-
-        case "text/plain":
-            console.log(" text plain");
-            resp.status(200)
-            resp.type("text/plain")
-            resp.send("Name: JC, email: qqjawe@gmail.com, empNo: " + empNo);
-            break;
-
-        case "application/json":
-             console.log(" json ");
-            resp.status(200)
-            resp.type("application/json")
-            resp.json({
-                name: "JC Awe 2222",
-                email: "qqjawe@gmail.com",
-                empNo: empNo
-            });
-            break;
-
-        // default:
-        //     console.log("default");
-        //     resp.status(200);
-        //     resp.redirect("<b> hello world </b><br><img src=\"Public/img/Cards/Modern/c01.png\"></img>");
-
-    }
-});
-
-app.get("/employee/:empNo/:infoType", function(req, resp) {
-
-    var empNo = req.params.empNo;
-    var infoType = req.params.infoType;
-    //Process empNo
-
-    resp.type("text/html")
-        .status(200)
-        .send("<h3>Employee number " + empNo + " details for " + infoType + "</h3>");
+	resp.status(201).end();
 
 });
 
-/*
-app.get("/", function(req, resp) {
+app.get("/pending-orders", function(req, resp) {
+	resp.status(200);
+	resp.type("application/json");
+	resp.json(allOrders);
+});
 
-    //Get the user agent of the client end
-    var userAgent = req.get("user-agent");
-    var responseMessage = "<h2>You are using <code>" + userAgent + "</code></h2>";
+app.use("/libs", express.static(path.join(__dirname, "bower_components")));
 
-    //Send response back on the http
-    resp.type("text/html");
-    resp.status(200);
-    resp.send(responseMessage);
-});*/
+app.use(express.static(path.join(__dirname, "public")));
 
-//Configure the port
-app.set("port", process.env.APP_PORR | 3000);
-  console.log("Express server listening on port 3000");
 
-//Start the expressjs server
+//Setup the server
+app.set("port", process.env.APP_PORT || 3000);
+
 app.listen(app.get("port"), function() {
-    console.log("Application started at %s on port %d"
-            , new Date(), app.get("port"));
+	console.log("Application started at %s on port %d"
+			, new Date(), app.get("port"));
 });
