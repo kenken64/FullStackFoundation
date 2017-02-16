@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="wgallery">
+<html lang="en" ng-app="weddgram">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -55,7 +55,19 @@
     <div class="container">
       <!-- Example row of columns -->
 
-
+      <ng-image-gallery
+          images="images"
+          methods="methods"
+          thumbnails="true | false | boolean-model"
+          inline="true | false | boolean-model"
+          img-bubbles="true | false | boolean-model"
+          bg-close="true | false | boolean-model"
+          bubbles="true | false | boolean-model"
+          img-anim="fadeup"
+          conf="conf"
+          on-open="opened();"
+          on-close="closed();"
+      ></ng-image-gallery>
 
 
         <!-- row 2: thumnail -->
@@ -154,6 +166,20 @@
     <!-- <script>window.jQuery || document.write('<script src="http://v4-alpha.getbootstrap.com/assets/js/vendor/jquery.min.js"></script>')</script>
     <script src="http://v4-alpha.getbootstrap.com/dist/js/bootstrap.min.js"></script> -->
 
+    <!-- Install AngularJS on CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+
+    <!-- Install ngAnimate on CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-animate.js"></script>
+
+    <!-- Load ng-image-gallery.js -->
+    <script src="bower_components/ng-image-gallery/dist/ng-image-gallery.min.js" charset="utf-8"></script>
+
+    <!-- Load ng-image-gallery.css -->
+    <script src="bower_components/ng-image-gallery/dist/ng-image-gallery.min.css" charset="utf-8"></script>
+
+    <!-- Install hammer.js for touchscreen -->
+    <script src="http://hammerjs.github.io/dist/hammer.min.js" charset="utf-8"></script>
 
   </body>
 </html>

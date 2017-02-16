@@ -2,7 +2,7 @@
   "name": "wp2landpage",
   "version": "1.0.0",
   "description": "",
-  "main": "main.js",
+  "main": "main.js" "dist/ng-image-gallery.js",
   "dependencies": {
     "express": "^4.14.1"
   },
