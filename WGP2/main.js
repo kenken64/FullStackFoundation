@@ -10,6 +10,7 @@ var app = express();
 //const BOWER_DIR = path.join(__dirname + "/bower_components");
 const FINAL_PATH = path.join(__dirname + "/public");
 console.log(FINAL_PATH);
+// List Final Path and back to static
 app.use(express.static(FINAL_PATH));
 app.use("/bower_components", express.static(__dirname + "/bower_components"));
 
