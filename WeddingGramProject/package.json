@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "angulargrid": "^0.6.5",
     "express": "^4.14.1",
     "path": "^0.12.7"
   }
