@@ -2,7 +2,10 @@
 <html lang="en" ng-app>
 <head>
     <meta charset="UTF-8">
-    <title>Wedding Photo Gallery</title>
+    <title>Wedding Photo Gallery - AngularJS</title>
+
+    <!-- Fonts by Googleapis -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
 
     <!-- default bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -22,6 +25,14 @@
     <!-- animate.css -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/animatecss/3.5.2/animate.min.css">
 
+    <!-- AngularJS Material CSS using GitCDN to load directly from `bower-material/master` -->
+   <link rel="stylesheet" href="https://gitcdn.link/repo/angular/bower-material/master/angular-material.css">
+
+   <!-- AngularJS Material CSS now available via Google CDN; version 1.0.7 used here -->
+   <!-- <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/0.11.2/angular-material.min.css"> -->
+
+
+
     <!-- use this style for testing and development purposes -->
     <style type="text/css">
 /*    .container{border: 9px solid green;}
@@ -31,6 +42,7 @@
     </style>
 
 </head>
+<div ng-controller="MainCtrl as vm" ng-cloak="" ng-app="app" layout="column" layout-fill>
 
 <body class="my-back">
 <div class="container"> <!-- all webpage design should be inside this div container -->
@@ -162,6 +174,8 @@
 
 
 
+
+
 <ul class="dynamic-grid" angular-grid="pics" grid-width="300" gutter-size="10" angular-grid-id="gallery" refresh-on-img-load="false" >
      <li data-ng-repeat="pic in pics" class="grid">
          <img src="{{pic.media.m}}" class="grid-img" data-actual-width = "{{pic.actualWidth}}"  data-actual-height="{{pic.actualHeight}}" />
@@ -201,10 +215,22 @@
 <!-- CDN install angular version 1.6.1 -->
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.js"></script>
 
+<!-- AngularJS Material Dependencies -->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-animate.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-aria.js"></script>
+
 <!-- AngularJS ngAnimate -->
 <!-- <script src="bower_components/angular/angular-animate.js"></script> -->
+
 <!-- CDN AngularJS ngAnimate -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.2/angular-animate.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.2/angular-animate.js"></script> -->
+
+<!-- AngularJS Material Javascript using GitCDN to load directly from `bower-material/master` -->
+<script src="https://gitcdn.link/repo/angular/bower-material/master/angular-material.js"></script>
+
+<!-- AngularJS Material Javascript now available via Google CDN; version 1.0.7 used here -->
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.7/angular-material.min.js"></script> -->
 
 <!-- angulargrid - AngularJS -->
 
