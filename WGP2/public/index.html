@@ -52,14 +52,23 @@
 
     <div class="container">
       <!-- Example row of columns -->
-      <div class="row">
-        <div class="col-md-4">
-          <h2>Heading</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
 
-
-          <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
+      <body ng-app="imageWall">
+        <h1>Wedding Wall</h1>
+        <ul id="image-wall" ng-controller="imageController as imageBox">
+        <div class="one">
+          <img class="sm-img" ng-src="{{image[1]}}">
+          <img class="sm-img" ng-src="{{image[2]}}">
+          <img ng-src="{{image[3]}}">
         </div>
+        <div class="two">
+          <img ng-src="{{image[4]}}">
+        </div>
+        <div class="three">
+          <img class="med-img" ng-src="{{image[5]}}">
+          <img ng-src="{{image[6]}}">
+        </div>
+      </ul>
 
 
         <!-- row 2: thumnail -->
