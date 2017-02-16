@@ -1,4 +1,4 @@
-(function() {
+w(function() {
 	var RatesApp = angular.module("RatesApp", ["ServiceRatesApp"]);
 
 	var RatesCtrl = function(RatesSvc) {
