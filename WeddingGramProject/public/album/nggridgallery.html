@@ -50,6 +50,58 @@
         </div> <!-- end of column -->
     </div> <!-- end of row 1 -->
 
+    <!-- AngularJS Search Function -->
+    <div id="demo">
+        <div id="searchFilterWrap">
+            <form id="searchForm">
+                <input type="text" id="searchBox" placeholder="Search by title" data-ng-model="searchTxt" data-ng-model-options="{debounce : 600}" />
+                <i class="icon-search"></i>
+            </form>
+            <div id="sortByWrap">
+                Sort By : <i class="icon-time" data-ng-click="sortByTime()"></i><i class="icon-like" data-ng-click="sortByLikes()"></i><i class="icon-watch" data-ng-click="sortByWatch()"></i>
+            </div>
+            <div>
+
+            </div>
+        </div>
+        <div id="gridWrap">
+            <ul class="dynamic-grid" angular-grid="images" grid-width="gridWidth" angular-grid-instance="instance" gutter-size="20" refresh-on-img-load="false" >
+                <li data-ng-repeat="pic in images" class="grid" angularGridOptions data-ng-clock>
+                    <img ng-src="{{pic.url}}" class="grid-img" data-actual-width="{{pic.width}}" data-actual-height="{{pic.height}}" />
+                    <div class="img-desc-wrap">
+                        <div class="title">
+                            {{pic.title}}
+                        </div>
+                        <div class="uploaded-date">
+                            Uploaded on : {{pic.date}}
+                        </div>
+                        <div class="likes-watch-wrap">
+                            <div class="likes"><span class="icon-like"></span> {{pic.likes}}</div>
+                            <div class="watch"><span class="icon-watch"></span> {{pic.watch}}</div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+<!--            <ul class="dynamic-grid" angular-grid="images" angular-grid-options="angularGridoptions" >
+                <li data-ng-repeat="pic in images" class="grid col-md-3 col-sm-4 col-xs-6" angularGridOptions data-ng-clock>
+                    <img ng-src="{{pic.url}}" class="grid-img" data-actual-width="{{pic.width}}" data-actual-height="{{pic.height}}" />
+                    <div class="img-desc-wrap">
+                        <div class="title">
+                            {{pic.title}}
+                        </div>
+                        <div class="uploaded-date">
+                            Uploaded on : {{pic.date}} {{searchTxt}}
+                        </div>
+                        <div class="likes-watch-wrap">
+                            <div class="likes"><span class="icon-like"></span> {{pic.likes}}</div>
+                            <div class="watch"><span class="icon-watch"></span> {{pic.watch}}</div>
+                        </div>
+                    </div>
+                </li>
+            </ul>-->
+        </div>
+    </div>
+
     <!-- row 2: thumnail -->
 <div class="row">
     <!-- column 1 -->
