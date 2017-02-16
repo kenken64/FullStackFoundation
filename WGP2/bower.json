@@ -1,11 +1,13 @@
 {
-  "name": "wgp2test",
+  "name": "wp2landpage",
+  "homepage": "https://jcawe.co/",
   "description": "",
   "main": "main.js",
   "authors": [
     "qjawe <qqjawe@gmail.com>"
   ],
-  "license": "ISC",
+  "description": "angular inline and modal image gallery",
+  "license": "MIT",
   "homepage": "https://github.com/qjawe/FullStackFoundation",
   "ignore": [
     "**/.*",
