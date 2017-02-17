@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="regform">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,12 +7,15 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="You have just completed the first 10 days of your 40 days journey, now is the time to test out your new skills!">
     <meta name="author" content="JC Awe">
-    <link rel="icon" href="img/favicon.ico">
+    <link rel="icon" href="images/favicon.ico">
 
     <title>Jumbotron Template for Bootstrap</title>
 
     <!-- Bootstrap core CSS -->
     <link href="/bower/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Install AngularJS in bower_components/angular/ -->
+    <script src="bower/angular/angular.js"></script>
 
     <!-- Custom styles for this template -->
     <!--<link href="bower/jumbotron/.css" rel="stylesheet">-->
@@ -50,11 +53,13 @@
     <div class="container">
 
       <form class="form-signin">
-        <h2 class="form-signin-heading">Please sign in</h2>
+        <h2 class="form-signin-heading">Sign In</h2>
         <label for="inputEmail" class="sr-only">Email address</label>
         <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="">
         <label for="inputPassword" class="sr-only">Password</label>
         <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
+        <label for="inputName" class="sr-only">Frist Name  Last Name</label>
+        <input type="name" id="inputPName" class="form-control" placeholder="Name" required="">
         <div class="checkbox">
           <label>
             <input type="checkbox" value="remember-me"> Remember me
@@ -72,9 +77,12 @@
           <h2>Heading</h2>
           <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
           <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
-        </div>
 
+        </div>
       </div>
+
+      <p>This is a angularJS Test script</p>
+      <p>1 + 2 = {{1 + 2}}</p>
 
       <hr>
 
@@ -90,8 +98,7 @@
     <script src="bower/jquery/jquery.js"></script>
     <script src="bower/jumbotron/jumbotron.js"></script>
 
-    Install AngularJS in bower_components/angular/
-    <script src="bower/angular/angular.js"></script>
+
 
 
 
