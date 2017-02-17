@@ -7,12 +7,8 @@ var express = require ("express");
 var app = express();
 
 // set the directory of the publick folder
-//const BOWER_DIR = path.join(__dirname + "/bower_components");
-const FINAL_PATH = path.join(__dirname + "/public");
-console.log(FINAL_PATH);
-app.use(express.static(FINAL_PATH));
-app.use("/bower_components", express.static(__dirname + "/bower_components"));
-
+app.use(express.static(__dirname + "/public") );
+app.use(express.static(__dirname + "/bower_components") );
 
 //Configure the port
 app.set("port", process.env.APP_PORR | 3000);
