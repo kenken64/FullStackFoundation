@@ -12,6 +12,8 @@ app.use(express.static(__dirname + "/public") );
 // this is set another name or alias to the target path
 // In HTML should set /bower/angular.js == /bower_components/angular.js
 app.use("/bower", express.static(__dirname + "/bower_components") );
+// In HTML should set /img/photo.jpg == /images/angular.js
+app.use("/img", express.static(__dirname + "/images") );
 
 
 //Configure the port
