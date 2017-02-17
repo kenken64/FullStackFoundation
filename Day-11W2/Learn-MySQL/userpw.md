@@ -1,5 +1,9 @@
 Last updated on 18 Feb 2017
 
+
+Open Terminal and execute the following command to set the root password:
+mysqladmin -u root password 'hplanet'
+
 Install MySQL on OS X El Capitan
 
 Normally the installation of MySQL can be achieved with a single command, which executes a script provided by MacMiniVault : bash <(curl -Ls http://git.io/eUx7rg)
