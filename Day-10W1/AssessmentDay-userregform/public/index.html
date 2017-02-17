@@ -52,39 +52,94 @@
       </div>
     </div>
 
-    <div class="container">
-
+    <div class="col-xs-12">
+      <!-- Email, Password, Name -->
+    <div class="wrapper">
       <form class="form-signin">
         <h2 class="form-signin-heading">Sign In</h2>
-        <label for="inputEmail" class="sr-only">Email address</label>
-        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="">
-        <label for="inputPassword" class="sr-only">Password</label>
-        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
-        <label for="inputName" class="sr-only">Frist Name  Last Name</label>
-        <input type="name" id="inputPName" class="form-control" placeholder="Name" required="">
+        <input type="text" class="form-control" name="username" placeholder="Email Address" required="" autofocus="" />
+        <input type="password" class="form-control" name="password" placeholder="Password" required=""/>
+        <input type="text" class="form-control" name="username" placeholder="Full Name" required="" autofocus="" />
+        <label class="checkbox">
 
-      <div class="row">
-        <div class="col-xs-12">
-          <br> Gender (radio)
-          <br>
-          <div class="btn-group btn-group-vertical" data-toggle="buttons">
-            <label class="btn active">
-              <input type="radio" name='gender1' checked><i class="fa fa-circle-o fa-2x"></i><i class="fa fa-dot-circle-o fa-2x"></i> <span>  Male</span>
-            </label>
-            <label class="btn">
-              <input type="radio" name='gender1'><i class="fa fa-circle-o fa-2x"></i><i class="fa fa-dot-circle-o fa-2x"></i><span> Female</span>
-            </label>
-          </div>
-        </div>
-      </div>
-
-        <div class="checkbox">
-          <label>
-            <input type="checkbox" value="remember-me"> Remember me
+        <!-- Male or Female select buttons - blue colour style on css -->
+        <div class="btn-group btn-group-horizontal" data-toggle="buttons">
+          <label class="btn active">
+            <input type="radio" name='gender1' checked><i class="fa fa-circle-o fa-2x"></i><i class="fa fa-dot-circle-o fa-2x"></i> <span>  Male</span>
+          </label>
+          <label class="btn">
+            <input type="radio" name='gender1'><i class="fa fa-circle-o fa-2x"></i><i class="fa fa-dot-circle-o fa-2x"></i><span> Female</span>
           </label>
         </div>
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+        <!-- Male or Female select buttons - blue colour style on css -->
+
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <div class="checkbox">
+              <label>
+                <input type="checkbox"> Remember me
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
       </form>
+    </div>
+
+    <div class="col-xs-12">
+      <!-- <br> Email, Password, Name -->
+      <form class="form-signin">
+        <h2 class="form-signin-heading-center">Sign In</h2>
+    <form class="form-horizontal">
+  <div class="form-group">
+    <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+    <div class="col-sm-10">
+      <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+    <div class="col-sm-10">
+      <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+    </div>
+
+
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12">
+      <br> Gender (radio)
+      <br>
+
+      <div class="btn-group btn-group-horizontal" data-toggle="buttons">
+        <label class="btn active">
+          <input type="radio" name='gender1' checked><i class="fa fa-circle-o fa-2x"></i><i class="fa fa-dot-circle-o fa-2x"></i> <span>  Male</span>
+        </label>
+        <label class="btn">
+          <input type="radio" name='gender1'><i class="fa fa-circle-o fa-2x"></i><i class="fa fa-dot-circle-o fa-2x"></i><span> Female</span>
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <div class="checkbox">
+        <label>
+          <input type="checkbox"> Remember me
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" class="btn btn-default">Sign in</button>
+    </div>
+  </div>
+</form>
+
+
 
     </div> <!-- /container -->
 
