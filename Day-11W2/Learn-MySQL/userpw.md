@@ -65,3 +65,17 @@ Type "cd ~/" to go to your home folder
 Type "touch .bash_profile" to create your new file.
 Edit .bash_profile with your favorite editor (or you can just type "open -e .bash_profile" to open it in TextEdit.
 Type ". .bash_profile" to reload .bash_profile and update any functions you add.
+
+
+
+If node could not find it - you need to brew link --overwrite node
+Execute this list of commands in this particular order:
+
+sudo brew uninstall node
+brew update
+brew upgrade
+brew cleanup
+brew install node
+sudo chown -R $(whoami) /usr/local
+brew link --overwrite node
+brew postinstall node
