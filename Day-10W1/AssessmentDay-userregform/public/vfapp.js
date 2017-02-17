@@ -1,4 +1,4 @@
-// app.js
+// vfapp.js
 // create angular app
 var validformApp = angular.module('validformApp', []);
 
