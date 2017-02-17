@@ -17,6 +17,8 @@
   "dependencies": {
     "angular": "^1.6.2",
     "bootstrap": "^3.3.7",
-    "jumbotron": "*"
+    "jumbotron": "*",
+    "components-font-awesome": "^4.7.0",
+    "font-awesome": "^4.7.0"
   }
 }

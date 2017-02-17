@@ -13,9 +13,11 @@
 
     <!-- Bootstrap core CSS -->
     <link href="/bower/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <link href="/bower/font-awesome/css/font-awesome.css" rel="stylesheet">
 
-    <!-- Install AngularJS in bower_components/angular/ -->
-    <script src="bower/angular/angular.js"></script>
+    <!-- loading style CSS -->
+    <link href="/style.css" rel="stylesheet">
+
 
     <!-- Custom styles for this template -->
     <!--<link href="bower/jumbotron/.css" rel="stylesheet">-->
@@ -60,6 +62,22 @@
         <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
         <label for="inputName" class="sr-only">Frist Name  Last Name</label>
         <input type="name" id="inputPName" class="form-control" placeholder="Name" required="">
+
+      <div class="row">
+        <div class="col-xs-12">
+          <br> Gender (radio)
+          <br>
+          <div class="btn-group btn-group-vertical" data-toggle="buttons">
+            <label class="btn active">
+              <input type="radio" name='gender1' checked><i class="fa fa-circle-o fa-2x"></i><i class="fa fa-dot-circle-o fa-2x"></i> <span>  Male</span>
+            </label>
+            <label class="btn">
+              <input type="radio" name='gender1'><i class="fa fa-circle-o fa-2x"></i><i class="fa fa-dot-circle-o fa-2x"></i><span> Female</span>
+            </label>
+          </div>
+        </div>
+      </div>
+
         <div class="checkbox">
           <label>
             <input type="checkbox" value="remember-me"> Remember me
@@ -98,7 +116,8 @@
     <script src="bower/jquery/jquery.js"></script>
     <script src="bower/jumbotron/jumbotron.js"></script>
 
-
+    <!-- Install AngularJS in bower_components/angular/ -->
+    <script src="bower/angular/angular.js"></script>
 
 
 
