@@ -11,11 +11,11 @@
 			if (base)
 				myparams.base = base.toUpperCase();
 
-			if (symbols)
-				myparams.symbols = symbols.toUpperCase();
+			if (images)
+				myparams.images = images.toUpperCase();
 
 			// GET /latest photos
-			var promise = $http.get("https://api.flickr.com/services/feeds/photos_public.gne?format=json&jsoncallback=JSON_CALLBACK", { 
+			var promise = $http.get("https://api.flickr.com/services/feeds/photos_public.gne?format=json&jsoncallback=JSON_CALLBACK", {
 					params: myparams
 				}
 			);
@@ -23,18 +23,18 @@
 			return (promise);
 		}
 
-		ServiceVFormAppSvc.getMandatory = function(base, symbols, fn) {
+		ServiceVFormAppSvc.getMandatory = function(base, images, fn) {
 
-			var promise = getPhotos(base, symbols);
+			var promise = getPhotos(base, images);
 
 			promise.then(function(result) {
 				fn(result.data);
 			});
 		};
 
-		ServiceVFormAppSvc.getMan = function(base, symbols) {
+		ServiceVFormAppSvc.getMan = function(base, images) {
 
-			var promise = getPhotos(base, symbols);
+			var promise = getPhotos(base, images);
 
 			var promise2 = promise.then(function(result) {
 				var ratesOnly = result.data;
