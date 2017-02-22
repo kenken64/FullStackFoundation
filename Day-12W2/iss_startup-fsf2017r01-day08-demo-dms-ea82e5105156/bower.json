@@ -1,12 +1,12 @@
 {
-  "name": "lapi",
+  "name": "dms",
   "description": "",
   "main": "client/app.js",
   "authors": [
-    "qjawe <qqjawe@gmail.com>"
+    "NUS ISS StackUp"
   ],
-  "license": "MIT",
-  "homepage": "https://github.com/qjawe/FullStackFoundation",
+  "license": "ISC",
+  "homepage": "",
   "ignore": [
     "**/.*",
     "node_modules",
@@ -15,8 +15,8 @@
     "tests"
   ],
   "dependencies": {
-    "angular": "^1.6.2",
-    "font-awesome": "fontawesome#^4.7.0",
+    "bootstrap": "^3.3.7",
+    "angular": "angularjs#^1.6.1",
     "angular-messages": "^1.6.2",
     "angular-animate": "^1.6.2"
   }
