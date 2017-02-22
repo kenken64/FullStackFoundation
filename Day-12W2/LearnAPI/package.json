@@ -1,0 +1,19 @@
+{
+  "name": "lapi",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qjawe/FullStackFoundation.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/qjawe/FullStackFoundation/issues"
+  },
+  "homepage": "https://github.com/qjawe/FullStackFoundation#readme",
+  "description": ""
+}
