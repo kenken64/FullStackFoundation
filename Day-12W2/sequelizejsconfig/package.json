@@ -1,5 +1,5 @@
 {
-  "name": "sequelizejs-config",
+  "name": "dms",
   "version": "1.0.0",
   "description": "Department Management System",
   "main": "server/app.js",
@@ -7,22 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "NUS ISS StackUp",
-  "license": "MIT",
+  "license": "ISC",
   "dependencies": {
     "body-parser": "^1.15.2",
-    "express": "^4.14.1",
-    "sequelize": "^3.30.2"
-  },
-  "devDependencies": {},
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/qjawe/FullStackFoundation.git"
-  },
-  "keywords": [
-    "sequelizejs"
-  ],
-  "bugs": {
-    "url": "https://github.com/qjawe/FullStackFoundation/issues"
-  },
-  "homepage": "https://github.com/qjawe/FullStackFoundation#readme"
+    "express": "^4.14.0"
+  }
 }
