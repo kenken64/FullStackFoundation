@@ -33,6 +33,7 @@ module.exports = function (conn, Sequelize) {
     tableName: "employees",
     timestamps: true
   });
-
+    // THis will return the the var
+    return Employees;
   }
 };
