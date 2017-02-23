@@ -54,7 +54,11 @@ app.get("/api/departments", function (req, res) {
     }).then(function(err){
       res
           .status(500)
-          .json(err)
+          .json(err);
     })
 
+});
+
+app.listen(NODE_PORT,function(){
+  console.log("Server is running at port" + NODE_PORT);
 })
