@@ -3,7 +3,7 @@ var path = require("path");
 var bodyParser = require("body-parser");
 var Sequelize = require("sequelize");
 
-const NODE_PORT = process.env.NODE_PORT || 8000;
+const NODE_PORT = process.env.NODE_PORT || 8080;
 
 // TODO check the dirname is correct when test
 const CLIENT_FOLDER = path.join(__dirname + '/../client');
@@ -30,10 +30,31 @@ var connection = new Sequelize(
   }
 );
 
+
+// import the database model into app.js
 var Department = require ("./models/department")(connection, Sequelize);
 var Employee = require ("./models/employee")(conn, Sequelize);
 var Manager = require ("./models/deptmanager")(conn, Squelize);
 
+// Map the data association
+Department.hasMany(Manager, {foreignKey: "dept_no"});
+Manager.hasOne(Employee, {foreignKey: "emp_no"});
 
+
+// setup the configuration of the express js
 app.use(express.static(CLIENT_FOLDER));
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extened : false}));
+
+// route pathh -retrive all departments
+app.get("/api/departments", function (req, res) {
+  Department
+    .finAll({
+
+    }).then(function(err){
+      res
+          .status(500)
+          .json(err)
+    })
+
+})
