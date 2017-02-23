@@ -92,6 +92,26 @@ app.put(API_DEPARTMENTS_ENDPOINT + "/:dept_no", function(req, res) {
 })
 
 
+app.delete(API_DEPARTMENTS_ENDPOINT + "/:dept_no", function(req, res) {
+  console.log("delete department");
+  console.log(req.params.dept_no);
+  var whereClause = {};
+  whereClause.dept_no = req.params.dept_no;
+  Department
+      .destroy({
+          where: whereClause
+      }).then(function (result) {
+          console.log(result);
+          if(result > 0){
+              res.status(200).json({success: true});
+          }else{
+              res.status(200).json({success: false});
+          }
+      }).catch(function(err){
+          res.status(50).json(err);
+      });
+});
+
 // listen server port number
 app.listen(NODE_PORT, function(){
     console.log("Server is running at port " + NODE_PORT);
