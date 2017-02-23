@@ -10,7 +10,8 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.15.2",
-    "express": "^4.14.1"
+    "express": "^4.14.1",
+    "sequelize": "^3.30.2"
   },
   "devDependencies": {
     "gulp": "^3.9.1",
