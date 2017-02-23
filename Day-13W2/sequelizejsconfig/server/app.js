@@ -12,6 +12,8 @@ const MSG_FOLDER = path.join(CLIENT_FOLDER, 'assets/messages');
 const MYSQL_USERNAME = "root";
 const MYSQL_PASSWORD = "hplanet";
 
+const API_DEPARTMENTS_ENDPOINT = "/api/departments";
+
 var app = express();
 
 var conn = new Sequelize(
@@ -71,17 +73,18 @@ app.post("/api/departments", function(req, res){
 
 
 app.put(API_DEPARTMENTS_ENDPOINT + "/:dept_no", function(req, res) {
-    var where = {};
-    where.dept_no = req.param.dept_no;
+    var whereClause = {};
+    whereClause.dept_no = req.param.dept_no;
+
     Department
-      .updates({dept_name: req.body.dept_name}),
-      {where: where}
-    ).then(function (result) {
-        res
-            .status(200)
-            .json(result);
+      .update({dept_name: req.body.dept_name},
+      {where: whereClause}
+      ).then(function (result) {
+          res
+              .status(200)
+              .json(result);
       }).catch(function (err) {
-          console.log(err);
+              console.log(err);
           res
               .status(500)
               .json(err);
