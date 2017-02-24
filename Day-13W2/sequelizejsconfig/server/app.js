@@ -32,6 +32,8 @@ var conn = new Sequelize(
     }
 );
 
+
+
 // import the database models into the app.js
 var Department = require('./models/department')(conn, Sequelize);
 var Employee = require('./models/employee')(conn, Sequelize);
@@ -45,6 +47,15 @@ Manager.hasOne(Employee, {foreignKey: 'emp_no'});
 app.use(express.static(CLIENT_FOLDER));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended : false}));
+
+
+/**
+* GET /api/departments - Get all dept records
+* POST /api/departments - Save a departments
+* DELETE / api/departments - 
+
+
+*/
 
 // route path - retrieve all departments - GET cmd API
 app.get("/api/departments", function(req, res){
