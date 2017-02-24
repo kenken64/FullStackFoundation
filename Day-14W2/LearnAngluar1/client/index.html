@@ -24,22 +24,56 @@
 
   <body>
 
-    <div class="container">
 
-      <div class="collapse" id="navbar-header">
-        <div class="inverse p-a">
-          <h3>Collapsed content</h3>
-          <p>Toggleable via the navbar brand.</p>
+      <nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="collapse" id="navbar-header">
+            <button type="button" class="navbar-toggle collapsed"
+                data-toggle="collapse" data-target="#abs-example-navbar-collapse-1"
+                aria-expandable="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">DMS</a>
         </div>
-      </div>
-      <div class="navbar navbar-default navbar-static-top">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-header">
-          ☰
-        </button>
-      </div>
+        <div class="collapse navbar-collapse" id="abs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-left">
+            <li class="nav-item">
+                        <a href="#register" data-toggle="tab">Registration</a>
+                </li>
+                <li class="nav-item">
+                        <a href="#search" data-toggle="tab">Search</a>
+                </li>
+                <li class="nav-item">
+                        <a href="#searchDB" data-toggle="tab">Search DB</a>
+                </li>
+                <li class="nav-item">
+                        <a href="#edit" data-toggle="tab">Edit</a>
+                </li>
+        </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container tab-content">
+   <div class="tab-pane fade in active " id="register">
+       <ng-include src="'/app/registration/register.html'"></ng-include>
+   </div>
+   <div class="tab-pane fade" id="search">
+       <ng-include src="'/app/search/search.html'"></ng-include>
+   </div>
+   <div class="tab-pane fade" id="searchDB">
+       <ng-include src="'/app/search/searchDB.html'"></ng-include>
+   </div>
+   <div class="tab-pane fade" id="edit">
+       <ng-include src="'/app/edit/edit.html'"></ng-include>
+   </div>
+</div>
 
       <!-- Main component for a primary marketing message or call to action -->
-      <div class="jumbotron">
+      <!-- <div class="jumbotron">
         <h1>Navbar example</h1>
         <p>This example is a quick exercise to illustrate how the default navbar works. It's placed within a <code>.container</code> to limit its width and will scroll with the rest of the page's content.</p>
         <p>
@@ -47,7 +81,13 @@
         </p>
       </div>
 
-    </div> <!-- /container -->
+    </div>
+     <! /container --> -->
+
+
+
+    Angular Experiments
+    <p>1 + 2 = {{1 + 2}}</p>
 
 
     <!-- Bootstrap core JavaScript
@@ -59,6 +99,6 @@
     <script src="bower_components/angular-messages/angular-messages.min.js"></script>
     <script src="bower_components/angular-animate/angular-animate.min.js"></script>
 
-
+    <script src="app/app.js"></script>
   </body>
 </html>
