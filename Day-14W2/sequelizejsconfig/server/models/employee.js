@@ -4,7 +4,7 @@ module.exports = function(conn, Sequelize){
         type: Sequelize.INTEGER(11),
         allowNull: false,
         primaryKey: true,
-        autoIncrement: true
+        autoIncrement: true  
     },
     birth_date: {
         type: Sequelize.DATE,
