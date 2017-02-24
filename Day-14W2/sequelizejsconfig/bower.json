@@ -1,24 +1,32 @@
 {
-  "name": "dms-day12-fsf2017",
-  "description": "",
+  "name": "learn-sequelize",
+  "description": "setup and config db",
   "main": "client/app.js",
   "authors": [
-    "Kenneth Phang <kenneth.phang@acorncodinglab.com> (https://github.com/kenken64/fitbit-oauth2/wiki)"
+    "JC Awe"
   ],
-  "license": "ISC",
-  "homepage": "",
+  "license": "MIT",
+  "homepage": "https://github.com/qjawe/FullStackFoundation",
   "ignore": [
     "**/.*",
     "node_modules",
     "bower_components",
     "test",
-    "tests"
+    "tests",
+    "client/bower_components"
   ],
   "dependencies": {
     "bootstrap": "^3.3.7",
-    "angular": "^1.6.2",
-    "font-awesome": "fontawesome#^4.7.0",
+    "angular": "angularjs#^1.6.1",
     "angular-messages": "^1.6.2",
-    "angular-animate": "^1.6.2"
-  }
+    "angular-animate": "^1.6.2",
+    "moment": "^2.17.1",
+    "jumbotron": "*",
+    "font-awesome": "fontawesome#^4.7.0",
+    "body-parser": "^1.16.1"
+  },
+  "keywords": [
+    "learning"
+  ],
+  "private": true
 }

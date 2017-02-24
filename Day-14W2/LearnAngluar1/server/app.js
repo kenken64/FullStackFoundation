@@ -214,10 +214,10 @@ app.get("/api/static/departments" , function(req, res){
     res.status(200).json(departments);
 })
 
-app.use(function(req,res){
-    console.log("404...");
-    res.status(400).sendFile(path.join(MSG_FOLDER, "404.html"));
-});
+// app.use(function(req,res){
+//     console.log("404...");
+//     res.status(400).sendFile(path.join(MSG_FOLDER, "404.html"));
+// });
 
 app.use(function(err, req, res, next){
     console.log("An error had occured 500");
