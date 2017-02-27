@@ -10,6 +10,7 @@
         service.insertDept = insertDept;
         service.retrieveDeptDB = retrieveDeptDB;
         service.retrieveDeptManagerDB = retrieveDeptManagerDB;
+        service.delete
 
         function insertDept(department){
             return $http({
@@ -35,6 +36,13 @@
             });
         }
 
+        function retrieveDeptManagerDB(searchString){
+            return $http({
+                method: 'GET',
+                url: "/api/departments/managers",
+                params: {'searchString': searchString}
+            });
+        }
 
 
     }
