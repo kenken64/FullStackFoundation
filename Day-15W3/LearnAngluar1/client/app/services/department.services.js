@@ -8,6 +8,8 @@
     function DeptService($http){
         var service = this;
         service.insertDept = insertDept;
+        service.retrieveDeptDB = retrieveDeptDB;
+        service.retrieveDeptManagerDB = retrieveDeptManagerDB;
 
         function insertDept(department){
             return $http({
@@ -16,5 +18,24 @@
                 data: {dept: department}
             })
         }
+
+        function retrieveDeptDB(searchString){
+            return $http({
+                method: 'GET',
+                url: "api/departments",
+                params: {'searchString': searchString}
+            });
+        }
+
+        function retrieveDeptManagerDB(searchString){
+            return $http({
+                method: 'GET',
+                url: "/api/departments/managers",
+                params: {'searchString': searchString}
+            });
+        }
+
+
+
     }
 })();
