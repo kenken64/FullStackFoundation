@@ -12,7 +12,7 @@
             message: "",
             code: 0
         };
-
+        
         vm.upload = upload;
 
         function upload(){
