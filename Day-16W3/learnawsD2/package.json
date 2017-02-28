@@ -4,7 +4,10 @@
   "description": "learning setup",
   "main": "app.js",
   "dependencies": {
-    "aws-sdk": "^2.20.0"
+    "aws-sdk": "^2.20.0",
+    "body-parser": "^1.16.1",
+    "express": "^4.14.1",
+    "multer": "^1.3.0"
   },
   "devDependencies": {},
   "scripts": {

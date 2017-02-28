@@ -30,8 +30,8 @@ s3Bucket.createBucket(function() {
 
 
 // Upload
-var imageBody = fs.createReadStream('singapore-startup-ecosystem-landscape-1024x822.png');
-var s3ImageObj = new AWS.S3 ({ params: {Bucket: 'stackup-testimg', Key:'singapore-startup-ecosystem-landscape-1024x822.png'} });
+var imageBody = fs.createReadStream('startupecosystem.png');
+var s3ImageObj = new AWS.S3 ({ params: {Bucket: 'stackup-testimg', Key:'startupecosystem.png'} });
 
 s3ImageObj.upload({Body: imageBody}).on('httpUploadProgress', function (evt) {
       console.log(evt);
@@ -40,7 +40,7 @@ s3ImageObj.upload({Body: imageBody}).on('httpUploadProgress', function (evt) {
 });
 
 // Download
-var params = {Bucket: 'stackup-testimg', Key: 'singapore-startup-ecosystem-landscape-1024x822.png'};
-var newFile = fs.createWriteStream('./singapore-startup-ecosystem-landscape-1024x822-return.png');
+var params = {Bucket: 'stackup-testimg', Key: 'startupecosystem.png'};
+var newFile = fs.createWriteStream('./startupecosystem-returnback.png');
 
 s3Bucket.getObject(params).createReadStream().pipe(newFile);
