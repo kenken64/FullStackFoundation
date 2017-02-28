@@ -1,7 +1,5 @@
 
-// mac users only
-// export AWS_ACCESS_KEY_ID=AKIAIT6WDP7TNVOEJTYQ
-// export AWS_SECRET_ACCESS_KEY=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
+
 
 var AWS = require('aws-sdk');
 var fs = require('fs');
