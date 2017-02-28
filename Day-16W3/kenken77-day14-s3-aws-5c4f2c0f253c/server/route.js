@@ -26,6 +26,7 @@ var uploadS3 = multer({
         s3: s3Bucket,
         bucket: 'nus-stackup',
         metadata: function(req, file, cb){
+            console.log(file.fieldname);
             cb(null, {fieldName: file.fieldname});
         },
         key: function(req, file, cb){

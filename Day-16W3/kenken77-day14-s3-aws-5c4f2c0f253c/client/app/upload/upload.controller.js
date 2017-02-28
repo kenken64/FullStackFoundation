@@ -41,7 +41,7 @@
                 }
             }).then(function(response){
                 vm.fileurl = response.data;
-                vm.status.message = "Successful uploaded to S3";
+                vm.status.message = "Successful upload to S3";
                 vm.status.code = 202;
             }).catch(function (err){
                 console.log(err);
@@ -49,5 +49,5 @@
                 vm.status.code = 500;
             })
         }
-    }
+    } // ctrl    
 })();

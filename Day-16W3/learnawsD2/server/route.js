@@ -26,6 +26,7 @@ var uploadS3 = multer({
         s3: s3Bucket,
         bucket: 'stackup-testimg',
         metadata: function(req, file, cb){
+            console.log(file.fieldname);
             cb(null, {fieldName: file.fieldname});
         },
         key: function(req, file, cb){
