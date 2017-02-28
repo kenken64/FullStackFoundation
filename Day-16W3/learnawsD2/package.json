@@ -1,0 +1,29 @@
+{
+  "name": "learnaws",
+  "version": "1.0.0",
+  "description": "learning setup",
+  "main": "app.js",
+  "dependencies": {
+    "aws-sdk": "^2.20.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/qjawe/FullStackFoundation.git"
+  },
+  "keywords": [
+    "aws",
+    "test",
+    "and",
+    "learn"
+  ],
+  "author": "jcawe.co",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/qjawe/FullStackFoundation/issues"
+  },
+  "homepage": "https://github.com/qjawe/FullStackFoundation#readme"
+}

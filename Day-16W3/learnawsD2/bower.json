@@ -1,0 +1,24 @@
+{
+  "name": "learnaws",
+  "description": "learning setup",
+  "main": "app.js",
+  "authors": [
+    "jcawe.co"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "aws",
+    "test",
+    "and",
+    "learn"
+  ],
+  "homepage": "https://github.com/qjawe/FullStackFoundation",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
