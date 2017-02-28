@@ -50,7 +50,7 @@
                 method: 'PUT',
                 url: "/api/departments/" + dept_no,
                 data: {
-                    dept_no: dept_no,
+                    dept_no: dept_no, 
                     dept_name: dept_name
                 }
             });
@@ -63,7 +63,7 @@
                 url: "/api/departments/managers/?searchString=" + dept_no
             });
         }
-
+        
 
     }
 })();

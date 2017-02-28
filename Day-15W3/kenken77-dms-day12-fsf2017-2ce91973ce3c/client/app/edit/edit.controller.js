@@ -7,7 +7,7 @@
 
     function EditCtrl($filter, DeptService){
         var vm = this;
-
+        
         // search criteria
         vm.dept_no = "";
         // result from the ajax endpoint
@@ -32,26 +32,26 @@
 
                     if(!result.data)
                         return;
-
+                    
                     console.log("result.data >>>> " + result.data[0].dept_no);
-
+                    
                     vm.result.dept_no = result.data[0].dept_no;
                     vm.result.dept_name = result.data[0].dept_name;
                     console.log("result.data >>>> " + JSON.stringify(result.data));
                     console.log("Kenneth !");
-                    console.log("xxx result.data[0].dept_manager[0] >>>> "
+                    console.log("xxx result.data[0].dept_manager[0] >>>> " 
                         + JSON.stringify(result.data[0].dept_managers[0]));
-
+                    
                     if(result.data[0].dept_managers[0]){
                         vm.result.manager_id = result.data[0].dept_managers[0].emp_no;
                         vm.result.manager_name = result.data[0].dept_managers[0].employee.first_name
-                        + " " +
+                        + " " + 
                         result.data[0].dept_managers[0].employee.last_name;
                         vm.result.manager_from = $filter('date')
                         (result.data[0].dept_managers[0].from_date, "MMM dd, yyyy");
                         vm.result.manager_to = $filter('date')
                         (result.data[0].dept_managers[0].to_date, "MMM dd, yyyy");
-                    }
+                    }    
                 }).catch(function(error){
                     console.log(JSON.stringify(error));
                 })
@@ -91,7 +91,7 @@
                 });
         }
 
-
+        
 
         function toggleEditor(){
             console.log("toggle editor");
@@ -99,6 +99,6 @@
         }
     }
 
-
+    
 
 })();
