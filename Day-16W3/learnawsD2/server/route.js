@@ -13,6 +13,20 @@ var fs = require('fs'),
         storage: storage
     });
 
+AWS.config.region = 'ap-southeast-1';
+console.log("AWS Bucket init .....");
+var s3Bucket = new AWS.S3({
+  / ** **/
+})
+
+var uploads3 = multer({
+  storage: multerS3({
+    s3: s3Bucket,
+    bucket: 'nus-stackup'
+  })
+})
+
+
 module.exports = function(app){
     app.post("/upload", upload.single("img-file"), function(req, res){
         console.log("Upload ...");
@@ -25,4 +39,7 @@ module.exports = function(app){
             })
         });
     });
+
+
+
 }
