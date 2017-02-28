@@ -1,5 +1,8 @@
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/master
 
 var AWS = require('aws-sdk');
 var fs = require('fs');
