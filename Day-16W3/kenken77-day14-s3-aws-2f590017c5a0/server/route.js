@@ -24,7 +24,7 @@ var s3Bucket = new AWS.S3({
 var uploadS3 = multer({
     storage: multerS3({
         s3: s3Bucket,
-        bucket: 'stackup-testimg',
+        bucket: 'nus-stackup',
         metadata: function(req, file, cb){
             cb(null, {fieldName: file.fieldname});
         },
